@@ -22,6 +22,8 @@ class MessageController extends Controller
            'subject' => 'required',
            'content' => 'required|min:3'
 
+       ],[
+           'name.required' => __('I need your name') //Mensaje personalizado (array pasado como segundo parametro de validate)
        ]);
 
        return 'Datos validados';

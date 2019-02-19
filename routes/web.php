@@ -11,6 +11,8 @@
 |
 */
 
+//App::setLocale('es'); Lo podriamos en español
+
 Route::get('/', function () {
     $nombre="Miguel";
     return view('home')->with('nombre',$nombre);

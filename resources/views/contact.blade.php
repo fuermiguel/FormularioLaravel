@@ -4,7 +4,7 @@
 
 @section('content')
 
-    <h1>Contact</h1>
+    <h1>{{__('Contact')}}</h1> <!--Esto es para traducir elementos estaticos (lo busca en es.json) -->
 
 
     <form method="post" action="{{route('contact')}}">
@@ -21,7 +21,7 @@
         <textarea name="content" placeholder="Mensaje..." value="{{old('content')}}" ></textarea><br>
         {!! $errors->first('content', '<small>:message</small><br>')!!}
 
-        <button>Enviar</button>
+        <button>@lang('Send')</button>
     </form>
 
 @endsection
