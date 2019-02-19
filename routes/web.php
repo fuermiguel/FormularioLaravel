@@ -22,4 +22,6 @@ Route::get('/portfolio','PortfolioController@index')->name('portfolio');
 
 Route::view('/contact','contact')->name('contact');
 
+Route::post('contact','MessageController@store');
+
 //Route::resource('projects','PortfolioController');
