@@ -27,3 +27,11 @@ Route::view('/contact','contact')->name('contact');
 Route::post('contact','MessageController@store');
 
 //Route::resource('projects','PortfolioController');
+
+Route::group(['middleware' => 'web'], function () {
+    Route::get('idioma/{idioma}', function ($idioma) {  
+        //Cuidado aquí hay docuemntación que pone Session:set  y no funciona.  
+        Session::put('lang', $idioma);
+        return Redirect::back();
+    });
+});
